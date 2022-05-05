@@ -1,0 +1,128 @@
+form {
+  position: relative;
+  @media screen and ($tablet) {
+    width: 50%;
+  }
+  label {
+    display: block;
+    @include websiteFont(700, $colorNeutralDarkGrayish, 0.8rem);
+    &:nth-of-type(1),
+    &:nth-of-type(3) {
+      position: relative;
+      top: 0.6rem;
+    }
+    &:nth-of-type(2) {
+      margin-bottom: 0.6rem;
+    }
+  }
+  input[type="number"]:not(.select input) {
+    background-color: $colorNeutralLightGrayish;
+    @include websiteFont(700, $colorNeutralDark) {
+      text-align: right;
+    }
+    padding-right: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    height: 2.5rem;
+    width: 100%;
+  }
+  
+  .bill {
+    margin-bottom: 1.2rem;
+  }
+  img {
+    position: relative;
+    top: 1.8rem;
+    left: 0.8rem;
+  }
+  .select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: .5rem; 
+    input {
+      @include websiteFont(700, white);
+      background-color: $colorNeutralDark;
+      border: none;
+      border-radius: 0.2rem;
+      width: 48%;
+      height: 2.5rem;
+      @media screen and ($tablet) {
+        width: 30%;
+      }
+      &:hover {
+        background-color: $colorNeutralLightGrayishBg;
+        color: $colorNeutralDark;
+      }
+      &.tipSelected {
+        background-color: $colorPrimary;
+      }
+    }
+    input[type="number"] {
+      background-color: $colorNeutralLightGrayish;
+      color: $colorNeutralDark;
+      text-align: right;
+      &::placeholder {
+        color: $colorNeutralDarkGrayish;
+        text-align: center;
+        padding-left: 0.8rem;
+      }
+    }
+  }
+  input[type="number"]:focus {
+    outline: 1px solid $colorPrimary;
+  }
+ 
+  .zero {
+    @include websiteFont(700, $colorAlert, 0.8rem);
+    position: absolute;
+    top: 13.6rem;
+    right: 0;
+    @media screen and (max-width: 700px) {
+      top: 16.6rem;
+    }
+  }
+  .d-none {
+    display: none;
+  }
+}
+
+.resume {
+  background-color: $colorNeutralDark;
+  border-radius: 0.7rem;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  @media screen and ($tablet) {
+    width: 50%;
+    margin-top: 0;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    strong {
+      @include websiteFont(700, white);
+      span {
+        @include websiteFont(400, $colorNeutralLightGrayishBg, 0.8rem);
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+    .amount {
+      @include websiteFont(700, $colorPrimary, 1.8rem);
+    }
+  }
+  .reset {
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: $colorPrimary;
+    margin-top: 2rem;
+    @include websiteFont(700, $colorNeutralDark);
+    &:hover {
+      background-color: $colorNeutralLightGrayishBg;
+    }
+  }
+}

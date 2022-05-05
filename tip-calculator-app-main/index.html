@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <h1>SPLI<br />TTER</h1>
+      <div class="container">
+        <form>
+          <label for="bill">Bill</label>
+          <img src="./images/icon-dollar.svg" class="bill-icon" />
+          <input type="number" class="bill" id="bill" steps="0.01" />
+          <label>Select Tip %</label>
+          <div class="select">
+            <input
+              type="button"
+              class="tipPercentage"
+              value="5%"
+              data-value="0.05"
+            />
+            <input
+              type="button"
+              class="tipPercentage"
+              value="10%"
+              data-value="0.10"
+            />
+            <input
+              type="button"
+              class="tipPercentage"
+              value="15%"
+              data-value="0.15"
+            />
+            <input
+              type="button"
+              class="tipPercentage"
+              value="25%"
+              data-value="0.25"
+            />
+            <input
+              type="button"
+              class="tipPercentage"
+              value="50%"
+              data-value="0.50"
+            />
+            <input
+              type="number"
+              id="customTipPercentage"
+              placeholder="Custom"
+            />
+          </div>
+          <div class="zero d-none" id="zero">Can't be zero</div>
+          <label for="people">Number of People</label>
+          <img src="./images/icon-person.svg" class="people-icon" />
+          <input type="number" class="people" id="people" />
+        </form>
+
+        <div class="resume">
+          <div>
+            <strong>Tip Amount <span>/ person</span></strong>
+            <div class="amount" id="tipInfo">$0.00</div>
+          </div>
+          <div>
+            <strong>Total <span>/ person</span></strong>
+            <div class="amount" id="totalInfo">$0.00</div>
+          </div>
+          <button type="submit" class="reset" id="reset">RESET</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/kasiaknapowska" target="_blank">Katarzyna Knapowska</a>.
+    </div>
+    <script src="out.js"></script>
+  </body>
+</html>
